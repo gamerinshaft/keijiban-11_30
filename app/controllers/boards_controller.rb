@@ -13,6 +13,10 @@ class BoardsController < ApplicationController
     redirect_to "/boards"
   end
 
+  def show
+    @board = Board.find(params[:id])
+  end
+
   private
 
   def params_board
