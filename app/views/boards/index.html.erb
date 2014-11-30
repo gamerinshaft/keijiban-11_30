@@ -1,3 +1,9 @@
-<h1>Hello World!</h1>
+<h1>2chクローン</h1>
 
 <%= link_to "新規作成する","boards/new" %>
+<hr>
+
+<% @boards.each do |board| %>
+  <p>タイトル：<%= board.title %></p>
+  <p>作者：<%= board.editor %></p>
+<% end %>
