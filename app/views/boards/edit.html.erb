@@ -1,6 +1,9 @@
 this is edit.erb
 <p> <%= link_to "topへ戻る", boards_path %> </p>
 
+<% if @board.errors.any? %>
+ <%= @board.errors.full_messages %>
+<% end %>
 <%= form_for @board do |f| %>
   <%= f.text_field :title %>
   <%= f.text_field :editor %>
