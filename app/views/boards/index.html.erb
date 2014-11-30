@@ -4,6 +4,6 @@
 <hr>
 
 <% @boards.each do |board| %>
-  <p>タイトル：<%= board.title %></p>
+  <p>タイトル： <%= link_to "#{board.title}", "/boards/#{board.id}" %></p>
   <p>作者：<%= board.editor %></p>
 <% end %>
