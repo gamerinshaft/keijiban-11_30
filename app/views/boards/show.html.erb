@@ -2,3 +2,4 @@
 
 <p><%= @board.title %></p>
 <p><%= link_to "掲示板を編集", "/boards/#{@board.id}/edit" %></p>
+<p><%= link_to "掲示板を削除", "/boards/#{@board.id}", method: :delete, data: {confirm: "本当によろしいですか？"} %></p>
