@@ -1,5 +1,19 @@
+.keijiban-show{
+  width: 100%;
+  height: 100%;
+  background-image: url("/assets/keijiban_back.jpg");
+}
+.keijiban-show .field_with_errors{
+  display: inline-block;
+  width: 75%
+}
+.keijiban-show .field_with_errors .cm-footer__form{
+  width: 98%;
+}
 .keijiban__body--show{
-  height: 1000px ;
+  padding: 10px 0px;
+  padding-bottom: 70px;
+  height: 100% ;
   top: 57px;
   background-image: url("/assets/keijiban_back.jpg");
   background-size: cover;
@@ -19,6 +33,9 @@
   width: 75%;
   border: 1px solid rgb(217, 222, 230);
   padding: 8px 5px;
+  display: inline-block;
+  vertical-align: middle;
+  height: 22px;
 }
 
 .cm-footer__submit{
@@ -27,5 +44,114 @@
   padding: 8px 12px;
   border-radius: 2px;
   color: white;
+  display: inline-block;
+  vertical-align: middle;
 }
 
+.keijiban__cm-content{
+  display: relative;
+  padding: 0px 80px;
+}
+
+.comment__content{
+  width: 100%;
+  margin: 15px 0px;
+  display: relative;
+}
+
+
+.cm-content__comment:nth-child(2n+1) .content__img img{
+  margin-left: -65px;
+}
+
+.cm-content__comment:nth-child(2n+1) .content__text:after {
+  bottom: 35px;
+  left: -19px;
+}
+
+.cm-content__comment:nth-child(2n+1) .content__text:before {
+  bottom: 22px;
+  left: -9px;
+  background-color: rgb(250,250,250);
+}
+
+
+.cm-content__comment:nth-child(2n+1) .content__text{
+  background-color: rgb(250,250,250);
+}
+
+.cm-content__comment:nth-child(2n+1) .content__time{
+  right: -40px;
+  bottom: 1px;
+}
+.cm-content__comment:nth-child(2n) .comment__content{
+  text-align: right;
+}
+.cm-content__comment:nth-child(2n) .content__img img{
+  margin-left: 15px;
+}
+
+.cm-content__comment:nth-child(2n) .content__text:after {
+  bottom: 35px;
+  right: -15px;
+
+}
+.cm-content__comment:nth-child(2n) .content__text:before {
+  bottom: 22px;
+  right: -10px;
+}
+.cm-content__comment:nth-child(2n) .content__text{
+
+}
+.cm-content__comment:nth-child(2n) .content__time{
+  left: -36px;
+  bottom: 1px;
+}
+
+.cm-content__comment .content__img img{
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  border-radius: 1px;
+}
+.cm-content__comment .content__name{
+  font-size: 13px;
+  color: rgb(252, 252, 252);
+}
+.cm-content__comment .content__text:after {
+  content: '';
+  position: absolute;
+  height: 40px;
+  width: 69px;
+  border-radius: 50px;
+  z-index: -1;
+  border: none;
+  background-position: center;
+  background-size: cover;
+  background-image: url("/assets/keijiban_back.jpg");
+}
+.cm-content__comment .content__text:before {
+  content: '';
+  position: absolute;
+  height: 50px;
+  width: 50px;
+  border-radius: 25px;
+  z-index: -1;
+  background: inherit;
+}
+.cm-content__comment .content__text{
+  position: relative;
+  display: inline-block;
+  border-radius: 15px;
+  font-size: 13px;
+  background-color: rgb(190, 241, 140);
+  padding: 10px;
+  color: #333;
+}
+.cm-content__comment .content__time{
+  color: rgb(252, 252, 252);
+  font-size: 10px;
+  position: absolute;
+  color: white;
+  letter-spacing: 1px;
+}

@@ -1,35 +1,42 @@
-<div class="keijiban__header">
-  <div class="header__top">
-    <div class="top__word"><%= @board.title %></div>
+<div class="keijiban-show">
+  <div class="keijiban__header">
+    <div class="header__top">
+      <div class="top__word">
+        <%= link_to board_path(@board), method: :delete, data: {confirm: "削除しますか？"} do%>
+          <%= @board.title %>
+        <% end %>
+      </div>
+    </div>
+  </div>
+  <div class="keijiban__body keijiban__body--show">
+    <div class="keijiban__cm-content">
+      <% @board.comments.each do |comment|  %>
+        <div class="cm-content__comment">
+
+          <div class="comment__content">
+            <div class="content__img">
+              <%= image_tag("apple.jpg") %>
+            </div>
+            <div class="content__name">
+              <%= comment.name %>
+            </div>
+            <%= link_to board_comment_path(@board, comment), method: :delete, data: {confirm: "削除しますか？"} do%>
+              <div class="content__text">
+                <%= comment.content %>
+                <div class="content__time">
+                  <%= (comment.created_at + 9.hour).strftime("%H:%M") %>
+                </div>
+              </div>
+            <% end %>
+          </div>
+        </div>
+      <% end %>
+    </div>
+    <div class="keijiban__cm-footer">
+      <%= form_for @comment, url: board_comments_path(@board, @comment) do |f| %>
+        <%= f.text_area :content, class: "cm-footer__form" %>
+        <%= f.submit value: "送信", class: "cm-footer__submit" %>
+      <% end %>
+    </div>
   </div>
 </div>
-<div class="keijiban__body keijiban__body--show">
-  hoge
-  <div class="keijiban__cm-footer">
-    <%= form_for @comment, url: board_comments_path(@board, @comment) do |f| %>
-      <%= f.text_field :content, class: "cm-footer__form" %>
-      <%= f.submit value: "送信", class: "cm-footer__submit" %>
-    <% end %>
-  </div>
-</div>
-
-<%= link_to "スレッド一覧に戻る", boards_path %>
-
-<p><%= @board.title %></p>
-
-<% @board.comments.each do |comment|  %>
-  <%= comment.name %>
-  <%= link_to "削除", board_comment_path(@board, comment), method: :delete, data: {confirm: "sakujo"} %>
-<% end %>
-
-<%= form_for @comment, url: board_comments_path(@board, @comment) do |f| %>
- 名前:
- <%= f.text_field :name %>
- <br>
- コメント:
- <%= f.text_area :content %>
- <br>
-<%= f.submit %>
-<% end %>
-<p><%= link_to "掲示板を編集", edit_board_path(@board) %></p>
-<p><%= link_to "掲示板を削除", board_path(@board), method: :delete, data: {confirm: "本当によろしいですか？"} %></p>

@@ -1,3 +1,7 @@
+html, body{
+  height: 100%;
+}
+
 .keijiban__header{
   position: relative;
   background-color: rgb(53,63,77);
@@ -13,11 +17,16 @@
 }
 
 .header__top .top__word{
+  color: white;
   padding: 15px;
   font-size: 18px;
-  color: white;
   letter-spacing: 2px;
   text-shadow: 1px 1px 1px gray;
+}
+
+.top__word a{
+  color: white;
+  text-decoration: none;
 }
 
 .header__diviver{
@@ -112,7 +121,7 @@
   font-size: 10px;
   display: inline-block;
   background-color: rgb(190, 197, 207);
-  width: 11px;
+  min-width: 11px;
   height: 12px;
   text-align: center;
   color: white;

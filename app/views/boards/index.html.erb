@@ -28,7 +28,7 @@
     </div>
     <div class="courses__body">
       <% @boards.each do |board| %>
-        <%= link_to  "/boards/#{board.id}" do %>
+        <%= link_to  "/boards/#{board.id}", target: "_blank" do %>
           <div class="body__course">
             <div class="course__img">
             </div>
