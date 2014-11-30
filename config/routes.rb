@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
-  resources :boards
+  resources :boards do
+    resources :comments, only: [:create, :destroy]
+  end
   # get     "boards"          => "boards#index"
   # get     "boards/new"      => "boards#new"
   # post    "boards"          => "boards#create"
@@ -62,4 +64,6 @@ Rails.application.routes.draw do
   #     # (app/controllers/admin/products_controller.rb)
   #     resources :products
   #   end
+
+  root to: "boards#index"
 end
