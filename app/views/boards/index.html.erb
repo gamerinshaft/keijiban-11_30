@@ -1,6 +1,6 @@
 <h1>2chクローン</h1>
 
-<%= link_to "新規作成する","boards/new" %>
+<%= link_to "新規作成する", new_board_path(@board) %>
 <hr>
 
 <% @boards.each do |board| %>

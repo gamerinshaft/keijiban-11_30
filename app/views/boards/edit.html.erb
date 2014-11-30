@@ -1,7 +1,7 @@
 this is edit.erb
-<p> <%= link_to "topへ戻る", "/boards" %> </p>
+<p> <%= link_to "topへ戻る", boards_path %> </p>
 
-<%= form_tag "/boards/#{@board.id}", method: :put do %>
+<%= form_tag board_path(@board), method: :put do %>
   <%= text_field_tag :title, @board.title %>
   <%= text_field_tag :editor, @board.editor %>
   <%= submit_tag %>
