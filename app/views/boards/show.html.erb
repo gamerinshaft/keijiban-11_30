@@ -1,3 +1,4 @@
 <%= link_to "スレッド一覧に戻る", "/boards" %>
 
 <p><%= @board.title %></p>
+<p><%= link_to "掲示板を編集", "/boards/#{@board.id}/edit" %></p>
