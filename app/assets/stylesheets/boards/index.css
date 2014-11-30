@@ -1,0 +1,123 @@
+.keijiban__header{
+  position: relative;
+  background-color: rgb(53,63,77);
+  width: 100%;
+  height: auto;
+  position: fixed;
+  top: 0px;
+  z-index: 2;
+}
+
+.header__top{
+  text-align: center;
+}
+
+.header__top .top__word{
+  padding: 15px;
+  font-size: 18px;
+  color: white;
+  letter-spacing: 2px;
+  text-shadow: 1px 1px 1px gray;
+}
+
+.header__diviver{
+  border-bottom: solid 1px rgb(46, 54, 68);
+  box-shadow: 0px 1px 1px rgba(255,255,255, 0.1);
+}
+.header__bottom{
+
+}
+
+.bottom__icons{
+  height: 60px;
+  display: table;
+  width: 380px;
+  margin: 0 auto;
+  box-sizing: border-box;
+  text-align: center;
+}
+
+@media screen and (max-width: 400px){
+  .bottom__icons{
+    width: 300px;
+  }
+}
+
+.icons__icon{
+  display: table-cell;
+  color: white;
+  font-size: 25px;
+  vertical-align: middle;
+}
+
+.keijiban__search{
+  background-color: rgb(239,242,245);
+  width: 100%;
+  text-align: center;
+}
+
+.search__form{
+  width: 95%;
+  margin: 15px 0px;
+  border: 1px solid rgb(217, 222, 230);
+  padding: 8px 5px;
+}
+
+.keijiban__body{
+  top: 182px;
+  z-index: 1;
+  position: relative;
+  overflow: scroll;
+}
+
+.keijiban__courses .courses__header{
+  background-color: rgb(251, 251, 253);
+  border-top: solid 1px rgb(227,230, 235);
+  border-bottom: solid 1px rgb(227,230, 235);
+  padding: 10px;
+}
+
+.courses__header .header__word{
+  color: rgb(183, 185, 193);
+  font-size: 14px;
+}
+.courses__body a{
+  text-decoration: none;
+}
+
+.courses__body .body__course{
+  border-bottom: 1px solid rgb(231, 234, 239);
+}
+
+.body__course .course__img{
+  background-image: url('/assets/apple.jpg');
+  background-size: cover;
+  width: 80px;
+  height: 80px;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.body__course .course__content{
+  width: auto;
+  display: inline-block;
+  vertical-align: middle;
+  margin: 0px 20px;
+  color: rgb(75, 78, 84);
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.course__content .content__cm-count{
+  font-size: 10px;
+  display: inline-block;
+  background-color: rgb(190, 197, 207);
+  width: 11px;
+  height: 12px;
+  text-align: center;
+  color: white;
+  padding: 1px;
+  border: solid 1px rgb(184, 189, 195);
+  border-radius: 3px;
+
+}

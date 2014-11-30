@@ -1,3 +1,18 @@
+<div class="keijiban__header">
+  <div class="header__top">
+    <div class="top__word"><%= @board.title %></div>
+  </div>
+</div>
+<div class="keijiban__body keijiban__body--show">
+  hoge
+  <div class="keijiban__cm-footer">
+    <%= form_for @comment, url: board_comments_path(@board, @comment) do |f| %>
+      <%= f.text_field :content, class: "cm-footer__form" %>
+      <%= f.submit value: "送信", class: "cm-footer__submit" %>
+    <% end %>
+  </div>
+</div>
+
 <%= link_to "スレッド一覧に戻る", boards_path %>
 
 <p><%= @board.title %></p>

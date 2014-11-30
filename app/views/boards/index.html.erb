@@ -1,9 +1,56 @@
-<h1>2chクローン</h1>
+<div class="keijiban__header">
+  <div class="header__top">
+    <div class="top__word">掲示板</div>
+  </div>
+  <div class="header__diviver"></div>
+  <div class="header__bottom">
+    <div class="bottom__icons">
+      <%= link_to new_board_path(@board), class: "icons__icon" do %>
+        <i class="fa fa-pencil"></i>
+      <% end %>
+      <%= link_to boards_path, class: "icons__icon" do %>
+        <i class="fa fa-book"></i>
+      <% end %>
+      <i class="icons__icon fa fa-group"></i>
+      <i class="icons__icon fa fa-sign-in"></i>
+    </div>
+  </div>
+  <div class="keijiban__search">
+    <input class="fa search__form container" placeholder="&#xf002; 名前で検索">
+  </div>
+</div>
+<div class="keijiban__body">
+  <div class="keijiban__courses">
+    <div class="courses__header">
+      <div class="header__word">
+        掲示板数(<%= @boards.size %>)
+      </div>
+    </div>
+    <div class="courses__body">
+      <% @boards.each do |board| %>
+        <%= link_to  "/boards/#{board.id}" do %>
+          <div class="body__course">
+            <div class="course__img">
+            </div>
+            <div class="course__content">
+              <%= board.title %>
+              <span class="content__cm-count">
+                <%= board.comments.size %>
+              </span>
+            </div>
+          </div>
+        <% end %>
+      <% end %>
+    </div>
+  </div>
+</div>
+
+<!-- <h1>2chクローン</h1>
 
 <%= link_to "新規作成する", new_board_path(@board) %>
 <hr>
-
+<%= @boards.size %>
 <% @boards.each do |board| %>
   <p>タイトル： <%= link_to "#{board.title}", "/boards/#{board.id}" %></p>
   <p>作者：<%= board.editor %></p>
-<% end %>
+<% end %> -->
